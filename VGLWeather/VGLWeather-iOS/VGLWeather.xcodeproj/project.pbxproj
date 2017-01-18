@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278FA1C31E2E9A8F00D04CFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 278FA1C21E2E9A8F00D04CFB /* main.m */; };
+		278FA1C61E2E9A8F00D04CFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 278FA1C51E2E9A8F00D04CFB /* AppDelegate.m */; };
+		278FA1C91E2E9A8F00D04CFB /* iOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278FA1C81E2E9A8F00D04CFB /* iOSViewController.m */; };
+		278FA1CC1E2E9A8F00D04CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278FA1CA1E2E9A8F00D04CFB /* Main.storyboard */; };
+		278FA1CE1E2E9A8F00D04CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278FA1CD1E2E9A8F00D04CFB /* Assets.xcassets */; };
+		278FA1D11E2E9A8F00D04CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278FA1CF1E2E9A8F00D04CFB /* LaunchScreen.storyboard */; };
+		278FA1E11E2E9AED00D04CFB /* libVGLPP iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA1E01E2E9ABF00D04CFB /* libVGLPP iOS.a */; };
+		278FA2791E2E9C1E00D04CFB /* libVUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA1FC1E2E9B4B00D04CFB /* libVUI.a */; };
+		278FA27C1E2EA14B00D04CFB /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 278FA27B1E2EA14B00D04CFB /* GLView.mm */; };
+		278FA2811E2EA45300D04CFB /* libassimp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA2801E2EA45300D04CFB /* libassimp-ios.a */; };
+		278FA2841E2EA48100D04CFB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA2831E2EA48100D04CFB /* libz.tbd */; };
+		278FA32B1E2EAE7D00D04CFB /* base.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F41E2EAE6000D04CFB /* base.fs */; };
+		278FA32C1E2EAE7D00D04CFB /* base.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F51E2EAE6000D04CFB /* base.vs */; };
+		278FA32D1E2EAE7D00D04CFB /* base_toon.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F61E2EAE6000D04CFB /* base_toon.fs */; };
+		278FA32E1E2EAE7D00D04CFB /* bump.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F71E2EAE6000D04CFB /* bump.fs */; };
+		278FA32F1E2EAE7D00D04CFB /* bump.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F81E2EAE6000D04CFB /* bump.vs */; };
+		278FA3301E2EAE7D00D04CFB /* bump_light.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2F91E2EAE6000D04CFB /* bump_light.fs */; };
+		278FA3311E2EAE7D00D04CFB /* gouraud.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FA1E2EAE6000D04CFB /* gouraud.fs */; };
+		278FA3321E2EAE7D00D04CFB /* gouraud.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FB1E2EAE6000D04CFB /* gouraud.vs */; };
+		278FA3331E2EAE7D00D04CFB /* gouraud_fast.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FC1E2EAE6000D04CFB /* gouraud_fast.vs */; };
+		278FA3341E2EAE7D00D04CFB /* gouraud_light.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FD1E2EAE6000D04CFB /* gouraud_light.vs */; };
+		278FA3351E2EAE7D00D04CFB /* gouraud_textured.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FE1E2EAE6000D04CFB /* gouraud_textured.fs */; };
+		278FA3361E2EAE7D00D04CFB /* phong_light.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA2FF1E2EAE6000D04CFB /* phong_light.fs */; };
+		278FA3371E2EAE7D00D04CFB /* pointSprite.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3001E2EAE6000D04CFB /* pointSprite.fs */; };
+		278FA3381E2EAE7D00D04CFB /* pointSprite.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3011E2EAE6000D04CFB /* pointSprite.vs */; };
+		278FA3391E2EAE7D00D04CFB /* selection.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3021E2EAE6000D04CFB /* selection.fs */; };
+		278FA33A1E2EAE7D00D04CFB /* selection.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3031E2EAE6000D04CFB /* selection.vs */; };
+		278FA33B1E2EAE7D00D04CFB /* selectionDepthRec.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3041E2EAE6000D04CFB /* selectionDepthRec.fs */; };
+		278FA33C1E2EAE7D00D04CFB /* selectionDepthRec.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3051E2EAE6000D04CFB /* selectionDepthRec.vs */; };
+		278FA33D1E2EAE7D00D04CFB /* shadowMap.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3061E2EAE6000D04CFB /* shadowMap.fs */; };
+		278FA33E1E2EAE7D00D04CFB /* shadowMap.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3071E2EAE6000D04CFB /* shadowMap.vs */; };
+		278FA33F1E2EAE7D00D04CFB /* shadowMapRender.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3081E2EAE6000D04CFB /* shadowMapRender.fs */; };
+		278FA3401E2EAE7D00D04CFB /* shadowMapRender.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3091E2EAE6000D04CFB /* shadowMapRender.vs */; };
+		278FA3411E2EAE7D00D04CFB /* smoothColorthickLines.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30A1E2EAE6000D04CFB /* smoothColorthickLines.fs */; };
+		278FA3421E2EAE7D00D04CFB /* smoothColorthickLines.gs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30B1E2EAE6000D04CFB /* smoothColorthickLines.gs */; };
+		278FA3431E2EAE7D00D04CFB /* smoothColorthickLines.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30C1E2EAE6000D04CFB /* smoothColorthickLines.vs */; };
+		278FA3441E2EAE7D00D04CFB /* smoothLine2D.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30D1E2EAE6000D04CFB /* smoothLine2D.fs */; };
+		278FA3451E2EAE7D00D04CFB /* smoothLine2D.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30E1E2EAE6000D04CFB /* smoothLine2D.vs */; };
+		278FA3461E2EAE7D00D04CFB /* solidAlphaTexture.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA30F1E2EAE6000D04CFB /* solidAlphaTexture.fs */; };
+		278FA3471E2EAE7D00D04CFB /* solidAlphaTexture.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3101E2EAE6000D04CFB /* solidAlphaTexture.vs */; };
+		278FA3481E2EAE7D00D04CFB /* solidColor.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3111E2EAE6000D04CFB /* solidColor.fs */; };
+		278FA3491E2EAE7D00D04CFB /* solidColor.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3121E2EAE6000D04CFB /* solidColor.vs */; };
+		278FA34A1E2EAE7D00D04CFB /* solidTexture.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3131E2EAE6000D04CFB /* solidTexture.fs */; };
+		278FA34B1E2EAE7D00D04CFB /* solidTexture.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3141E2EAE6000D04CFB /* solidTexture.vs */; };
+		278FA34C1E2EAE7D00D04CFB /* spaceBoundingFrame.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3151E2EAE6000D04CFB /* spaceBoundingFrame.fs */; };
+		278FA34D1E2EAE7D00D04CFB /* spaceBoundingFrame.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3161E2EAE6000D04CFB /* spaceBoundingFrame.vs */; };
+		278FA34E1E2EAE7D00D04CFB /* thickLines.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3171E2EAE6000D04CFB /* thickLines.fs */; };
+		278FA34F1E2EAE7D00D04CFB /* thickLines.gs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3181E2EAE6000D04CFB /* thickLines.gs */; };
+		278FA3501E2EAE7D00D04CFB /* thickLines.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3191E2EAE6000D04CFB /* thickLines.vs */; };
+		278FA3511E2EAE7D00D04CFB /* user_template_basic_lighting.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31A1E2EAE6000D04CFB /* user_template_basic_lighting.fs */; };
+		278FA3521E2EAE7D00D04CFB /* user_template_basic_lighting.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31B1E2EAE6000D04CFB /* user_template_basic_lighting.vs */; };
+		278FA3531E2EAE7D00D04CFB /* user_template_basic_texture.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31C1E2EAE6000D04CFB /* user_template_basic_texture.fs */; };
+		278FA3541E2EAE7D00D04CFB /* user_template_basic_texture.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31D1E2EAE6000D04CFB /* user_template_basic_texture.vs */; };
+		278FA3551E2EAE7D00D04CFB /* user_template_bump.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31E1E2EAE6000D04CFB /* user_template_bump.fs */; };
+		278FA3561E2EAE7D00D04CFB /* user_template_bump.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA31F1E2EAE6000D04CFB /* user_template_bump.vs */; };
+		278FA3571E2EAE7D00D04CFB /* user_template_env.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3201E2EAE6000D04CFB /* user_template_env.fs */; };
+		278FA3581E2EAE7D00D04CFB /* user_template_env.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3211E2EAE6000D04CFB /* user_template_env.vs */; };
+		278FA3591E2EAE7D00D04CFB /* user_template_full_lighting.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3221E2EAE6000D04CFB /* user_template_full_lighting.fs */; };
+		278FA35A1E2EAE7D00D04CFB /* user_template_full_lighting.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3231E2EAE6000D04CFB /* user_template_full_lighting.vs */; };
+		278FA35B1E2EAE7D00D04CFB /* user_template_passthru_geom.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3241E2EAE6000D04CFB /* user_template_passthru_geom.fs */; };
+		278FA35C1E2EAE7D00D04CFB /* user_template_passthru_geom.gs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3251E2EAE6000D04CFB /* user_template_passthru_geom.gs */; };
+		278FA35D1E2EAE7D00D04CFB /* user_template_passthru_geom.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3261E2EAE6000D04CFB /* user_template_passthru_geom.vs */; };
+		278FA35E1E2EAE7D00D04CFB /* user_template_pointsprite_geom.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3271E2EAE6000D04CFB /* user_template_pointsprite_geom.fs */; };
+		278FA35F1E2EAE7D00D04CFB /* user_template_pointsprite_geom.gs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3281E2EAE6000D04CFB /* user_template_pointsprite_geom.gs */; };
+		278FA3601E2EAE7D00D04CFB /* user_template_pointsprite_geom.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278FA3291E2EAE6000D04CFB /* user_template_pointsprite_geom.vs */; };
+		278FA36E1E2ED0AF00D04CFB /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 278FA36D1E2ED0AF00D04CFB /* assets */; };
+		278FA3701E2ED0E400D04CFB /* libfreetype-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA36F1E2ED0E400D04CFB /* libfreetype-ios.a */; };
+		278FA3941E2EE81A00D04CFB /* libVHTTP-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA3931E2EE81A00D04CFB /* libVHTTP-iOS.a */; };
+		278FA3961E2EEB0A00D04CFB /* libcurl-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA3951E2EEB0A00D04CFB /* libcurl-ios.a */; };
+		278FA3981E2EEB3700D04CFB /* libcurlcpp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA3971E2EEB3700D04CFB /* libcurlcpp-ios.a */; };
+		278FA3B71E30215700D04CFB /* cloudy.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B11E30215700D04CFB /* cloudy.vsxproj */; };
+		278FA3B81E30215700D04CFB /* partly_cloudy.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B21E30215700D04CFB /* partly_cloudy.vsxproj */; };
+		278FA3B91E30215700D04CFB /* rain.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B31E30215700D04CFB /* rain.vsxproj */; };
+		278FA3BA1E30215700D04CFB /* snow.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B41E30215700D04CFB /* snow.vsxproj */; };
+		278FA3BB1E30215700D04CFB /* storm.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B51E30215700D04CFB /* storm.vsxproj */; };
+		278FA3BC1E30215700D04CFB /* sunny.vsxproj in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3B61E30215700D04CFB /* sunny.vsxproj */; };
+		278FA3CB1E3021BC00D04CFB /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3BD1E3021BC00D04CFB /* Renderer.cpp */; };
+		278FA3CC1E3021BC00D04CFB /* Startup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3BF1E3021BC00D04CFB /* Startup.cpp */; };
+		278FA3CD1E3021BC00D04CFB /* WeatherData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C11E3021BC00D04CFB /* WeatherData.cpp */; };
+		278FA3CE1E3021BC00D04CFB /* WeatherRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C31E3021BC00D04CFB /* WeatherRenderer.cpp */; };
+		278FA3CF1E3021BC00D04CFB /* WeatherSetupViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C51E3021BC00D04CFB /* WeatherSetupViewController.cpp */; };
+		278FA3D01E3021BC00D04CFB /* WeatherView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C71E3021BC00D04CFB /* WeatherView.cpp */; };
+		278FA3D11E3021BC00D04CFB /* WeatherViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C91E3021BC00D04CFB /* WeatherViewController.cpp */; };
+		278FA3D31E3021D500D04CFB /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3D21E3021D500D04CFB /* weather.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		278FA1DD1E2E9ABF00D04CFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 278461321A157C5E0096AB49;
+			remoteInfo = VGLPP;
+		};
+		278FA1DF1E2E9ABF00D04CFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27294A631AD712320011F04D;
+			remoteInfo = "VGLPP iOS";
+		};
+		278FA1FB1E2E9B4B00D04CFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 278FA1EB1E2E9B2500D04CFB;
+			remoteInfo = VUI;
+		};
+		278FA37B1E2EE7D700D04CFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27CBB8851DA04E7A00500056;
+			remoteInfo = VHTTP;
+		};
+		278FA3921E2EE81A00D04CFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 278FA3901E2EE7DE00D04CFB;
+			remoteInfo = "VHTTP-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		278FA32A1E2EAE6600D04CFB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = vgl/shaders;
+			dstSubfolderSpec = 7;
+			files = (
+				278FA32B1E2EAE7D00D04CFB /* base.fs in CopyFiles */,
+				278FA32C1E2EAE7D00D04CFB /* base.vs in CopyFiles */,
+				278FA32D1E2EAE7D00D04CFB /* base_toon.fs in CopyFiles */,
+				278FA32E1E2EAE7D00D04CFB /* bump.fs in CopyFiles */,
+				278FA32F1E2EAE7D00D04CFB /* bump.vs in CopyFiles */,
+				278FA3301E2EAE7D00D04CFB /* bump_light.fs in CopyFiles */,
+				278FA3311E2EAE7D00D04CFB /* gouraud.fs in CopyFiles */,
+				278FA3321E2EAE7D00D04CFB /* gouraud.vs in CopyFiles */,
+				278FA3331E2EAE7D00D04CFB /* gouraud_fast.vs in CopyFiles */,
+				278FA3341E2EAE7D00D04CFB /* gouraud_light.vs in CopyFiles */,
+				278FA3351E2EAE7D00D04CFB /* gouraud_textured.fs in CopyFiles */,
+				278FA3361E2EAE7D00D04CFB /* phong_light.fs in CopyFiles */,
+				278FA3371E2EAE7D00D04CFB /* pointSprite.fs in CopyFiles */,
+				278FA3381E2EAE7D00D04CFB /* pointSprite.vs in CopyFiles */,
+				278FA3391E2EAE7D00D04CFB /* selection.fs in CopyFiles */,
+				278FA33A1E2EAE7D00D04CFB /* selection.vs in CopyFiles */,
+				278FA33B1E2EAE7D00D04CFB /* selectionDepthRec.fs in CopyFiles */,
+				278FA33C1E2EAE7D00D04CFB /* selectionDepthRec.vs in CopyFiles */,
+				278FA33D1E2EAE7D00D04CFB /* shadowMap.fs in CopyFiles */,
+				278FA33E1E2EAE7D00D04CFB /* shadowMap.vs in CopyFiles */,
+				278FA33F1E2EAE7D00D04CFB /* shadowMapRender.fs in CopyFiles */,
+				278FA3401E2EAE7D00D04CFB /* shadowMapRender.vs in CopyFiles */,
+				278FA3411E2EAE7D00D04CFB /* smoothColorthickLines.fs in CopyFiles */,
+				278FA3421E2EAE7D00D04CFB /* smoothColorthickLines.gs in CopyFiles */,
+				278FA3431E2EAE7D00D04CFB /* smoothColorthickLines.vs in CopyFiles */,
+				278FA3441E2EAE7D00D04CFB /* smoothLine2D.fs in CopyFiles */,
+				278FA3451E2EAE7D00D04CFB /* smoothLine2D.vs in CopyFiles */,
+				278FA3461E2EAE7D00D04CFB /* solidAlphaTexture.fs in CopyFiles */,
+				278FA3471E2EAE7D00D04CFB /* solidAlphaTexture.vs in CopyFiles */,
+				278FA3481E2EAE7D00D04CFB /* solidColor.fs in CopyFiles */,
+				278FA3491E2EAE7D00D04CFB /* solidColor.vs in CopyFiles */,
+				278FA34A1E2EAE7D00D04CFB /* solidTexture.fs in CopyFiles */,
+				278FA34B1E2EAE7D00D04CFB /* solidTexture.vs in CopyFiles */,
+				278FA34C1E2EAE7D00D04CFB /* spaceBoundingFrame.fs in CopyFiles */,
+				278FA34D1E2EAE7D00D04CFB /* spaceBoundingFrame.vs in CopyFiles */,
+				278FA34E1E2EAE7D00D04CFB /* thickLines.fs in CopyFiles */,
+				278FA34F1E2EAE7D00D04CFB /* thickLines.gs in CopyFiles */,
+				278FA3501E2EAE7D00D04CFB /* thickLines.vs in CopyFiles */,
+				278FA3511E2EAE7D00D04CFB /* user_template_basic_lighting.fs in CopyFiles */,
+				278FA3521E2EAE7D00D04CFB /* user_template_basic_lighting.vs in CopyFiles */,
+				278FA3531E2EAE7D00D04CFB /* user_template_basic_texture.fs in CopyFiles */,
+				278FA3541E2EAE7D00D04CFB /* user_template_basic_texture.vs in CopyFiles */,
+				278FA3551E2EAE7D00D04CFB /* user_template_bump.fs in CopyFiles */,
+				278FA3561E2EAE7D00D04CFB /* user_template_bump.vs in CopyFiles */,
+				278FA3571E2EAE7D00D04CFB /* user_template_env.fs in CopyFiles */,
+				278FA3581E2EAE7D00D04CFB /* user_template_env.vs in CopyFiles */,
+				278FA3591E2EAE7D00D04CFB /* user_template_full_lighting.fs in CopyFiles */,
+				278FA35A1E2EAE7D00D04CFB /* user_template_full_lighting.vs in CopyFiles */,
+				278FA35B1E2EAE7D00D04CFB /* user_template_passthru_geom.fs in CopyFiles */,
+				278FA35C1E2EAE7D00D04CFB /* user_template_passthru_geom.gs in CopyFiles */,
+				278FA35D1E2EAE7D00D04CFB /* user_template_passthru_geom.vs in CopyFiles */,
+				278FA35E1E2EAE7D00D04CFB /* user_template_pointsprite_geom.fs in CopyFiles */,
+				278FA35F1E2EAE7D00D04CFB /* user_template_pointsprite_geom.gs in CopyFiles */,
+				278FA3601E2EAE7D00D04CFB /* user_template_pointsprite_geom.vs in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		278FA1BE1E2E9A8F00D04CFB /* VGLWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGLWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		278FA1C21E2E9A8F00D04CFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		278FA1C41E2E9A8F00D04CFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		278FA1C51E2E9A8F00D04CFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		278FA1C71E2E9A8F00D04CFB /* iOSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSViewController.h; sourceTree = "<group>"; };
+		278FA1C81E2E9A8F00D04CFB /* iOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSViewController.m; sourceTree = "<group>"; };
+		278FA1CB1E2E9A8F00D04CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		278FA1CD1E2E9A8F00D04CFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		278FA1D01E2E9A8F00D04CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		278FA1D21E2E9A8F00D04CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VGLPP.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VGLPP.xcodeproj"; sourceTree = "<group>"; };
+		278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VUI.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VUI/VUI.xcodeproj"; sourceTree = "<group>"; };
+		278FA27A1E2EA14A00D04CFB /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		278FA27B1E2EA14B00D04CFB /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
+		278FA2801E2EA45300D04CFB /* libassimp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libassimp-ios.a"; path = "../../../Verto Studio/Ortho Sketch 3D/Verto/3rd party/assimp/libassimp-ios.a"; sourceTree = "<group>"; };
+		278FA2831E2EA48100D04CFB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		278FA2F41E2EAE6000D04CFB /* base.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = base.fs; sourceTree = "<group>"; };
+		278FA2F51E2EAE6000D04CFB /* base.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = base.vs; sourceTree = "<group>"; };
+		278FA2F61E2EAE6000D04CFB /* base_toon.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = base_toon.fs; sourceTree = "<group>"; };
+		278FA2F71E2EAE6000D04CFB /* bump.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = bump.fs; sourceTree = "<group>"; };
+		278FA2F81E2EAE6000D04CFB /* bump.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = bump.vs; sourceTree = "<group>"; };
+		278FA2F91E2EAE6000D04CFB /* bump_light.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = bump_light.fs; sourceTree = "<group>"; };
+		278FA2FA1E2EAE6000D04CFB /* gouraud.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gouraud.fs; sourceTree = "<group>"; };
+		278FA2FB1E2EAE6000D04CFB /* gouraud.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gouraud.vs; sourceTree = "<group>"; };
+		278FA2FC1E2EAE6000D04CFB /* gouraud_fast.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gouraud_fast.vs; sourceTree = "<group>"; };
+		278FA2FD1E2EAE6000D04CFB /* gouraud_light.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gouraud_light.vs; sourceTree = "<group>"; };
+		278FA2FE1E2EAE6000D04CFB /* gouraud_textured.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = gouraud_textured.fs; sourceTree = "<group>"; };
+		278FA2FF1E2EAE6000D04CFB /* phong_light.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = phong_light.fs; sourceTree = "<group>"; };
+		278FA3001E2EAE6000D04CFB /* pointSprite.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = pointSprite.fs; sourceTree = "<group>"; };
+		278FA3011E2EAE6000D04CFB /* pointSprite.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = pointSprite.vs; sourceTree = "<group>"; };
+		278FA3021E2EAE6000D04CFB /* selection.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = selection.fs; sourceTree = "<group>"; };
+		278FA3031E2EAE6000D04CFB /* selection.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = selection.vs; sourceTree = "<group>"; };
+		278FA3041E2EAE6000D04CFB /* selectionDepthRec.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = selectionDepthRec.fs; sourceTree = "<group>"; };
+		278FA3051E2EAE6000D04CFB /* selectionDepthRec.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = selectionDepthRec.vs; sourceTree = "<group>"; };
+		278FA3061E2EAE6000D04CFB /* shadowMap.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shadowMap.fs; sourceTree = "<group>"; };
+		278FA3071E2EAE6000D04CFB /* shadowMap.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shadowMap.vs; sourceTree = "<group>"; };
+		278FA3081E2EAE6000D04CFB /* shadowMapRender.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shadowMapRender.fs; sourceTree = "<group>"; };
+		278FA3091E2EAE6000D04CFB /* shadowMapRender.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shadowMapRender.vs; sourceTree = "<group>"; };
+		278FA30A1E2EAE6000D04CFB /* smoothColorthickLines.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = smoothColorthickLines.fs; sourceTree = "<group>"; };
+		278FA30B1E2EAE6000D04CFB /* smoothColorthickLines.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = smoothColorthickLines.gs; sourceTree = "<group>"; };
+		278FA30C1E2EAE6000D04CFB /* smoothColorthickLines.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = smoothColorthickLines.vs; sourceTree = "<group>"; };
+		278FA30D1E2EAE6000D04CFB /* smoothLine2D.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = smoothLine2D.fs; sourceTree = "<group>"; };
+		278FA30E1E2EAE6000D04CFB /* smoothLine2D.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = smoothLine2D.vs; sourceTree = "<group>"; };
+		278FA30F1E2EAE6000D04CFB /* solidAlphaTexture.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidAlphaTexture.fs; sourceTree = "<group>"; };
+		278FA3101E2EAE6000D04CFB /* solidAlphaTexture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidAlphaTexture.vs; sourceTree = "<group>"; };
+		278FA3111E2EAE6000D04CFB /* solidColor.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidColor.fs; sourceTree = "<group>"; };
+		278FA3121E2EAE6000D04CFB /* solidColor.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidColor.vs; sourceTree = "<group>"; };
+		278FA3131E2EAE6000D04CFB /* solidTexture.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidTexture.fs; sourceTree = "<group>"; };
+		278FA3141E2EAE6000D04CFB /* solidTexture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = solidTexture.vs; sourceTree = "<group>"; };
+		278FA3151E2EAE6000D04CFB /* spaceBoundingFrame.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = spaceBoundingFrame.fs; sourceTree = "<group>"; };
+		278FA3161E2EAE6000D04CFB /* spaceBoundingFrame.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = spaceBoundingFrame.vs; sourceTree = "<group>"; };
+		278FA3171E2EAE6000D04CFB /* thickLines.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = thickLines.fs; sourceTree = "<group>"; };
+		278FA3181E2EAE6000D04CFB /* thickLines.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = thickLines.gs; sourceTree = "<group>"; };
+		278FA3191E2EAE6000D04CFB /* thickLines.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = thickLines.vs; sourceTree = "<group>"; };
+		278FA31A1E2EAE6000D04CFB /* user_template_basic_lighting.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_basic_lighting.fs; sourceTree = "<group>"; };
+		278FA31B1E2EAE6000D04CFB /* user_template_basic_lighting.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_basic_lighting.vs; sourceTree = "<group>"; };
+		278FA31C1E2EAE6000D04CFB /* user_template_basic_texture.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_basic_texture.fs; sourceTree = "<group>"; };
+		278FA31D1E2EAE6000D04CFB /* user_template_basic_texture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_basic_texture.vs; sourceTree = "<group>"; };
+		278FA31E1E2EAE6000D04CFB /* user_template_bump.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_bump.fs; sourceTree = "<group>"; };
+		278FA31F1E2EAE6000D04CFB /* user_template_bump.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_bump.vs; sourceTree = "<group>"; };
+		278FA3201E2EAE6000D04CFB /* user_template_env.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_env.fs; sourceTree = "<group>"; };
+		278FA3211E2EAE6000D04CFB /* user_template_env.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_env.vs; sourceTree = "<group>"; };
+		278FA3221E2EAE6000D04CFB /* user_template_full_lighting.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_full_lighting.fs; sourceTree = "<group>"; };
+		278FA3231E2EAE6000D04CFB /* user_template_full_lighting.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_full_lighting.vs; sourceTree = "<group>"; };
+		278FA3241E2EAE6000D04CFB /* user_template_passthru_geom.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_passthru_geom.fs; sourceTree = "<group>"; };
+		278FA3251E2EAE6000D04CFB /* user_template_passthru_geom.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_passthru_geom.gs; sourceTree = "<group>"; };
+		278FA3261E2EAE6000D04CFB /* user_template_passthru_geom.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_passthru_geom.vs; sourceTree = "<group>"; };
+		278FA3271E2EAE6000D04CFB /* user_template_pointsprite_geom.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_pointsprite_geom.fs; sourceTree = "<group>"; };
+		278FA3281E2EAE6000D04CFB /* user_template_pointsprite_geom.gs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_pointsprite_geom.gs; sourceTree = "<group>"; };
+		278FA3291E2EAE6000D04CFB /* user_template_pointsprite_geom.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = user_template_pointsprite_geom.vs; sourceTree = "<group>"; };
+		278FA36D1E2ED0AF00D04CFB /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../assets; sourceTree = "<group>"; };
+		278FA36F1E2ED0E400D04CFB /* libfreetype-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfreetype-ios.a"; path = "../../../VGLPP/VGLPP Demo/3rd Party/freetype/libfreetype-ios.a"; sourceTree = "<group>"; };
+		278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VHTTP.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VHTTP.xcodeproj"; sourceTree = "<group>"; };
+		278FA3951E2EEB0A00D04CFB /* libcurl-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurl-ios.a"; path = "../../../VGLPP/VGLPP Demo/3rd Party/curl/libcurl-ios.a"; sourceTree = "<group>"; };
+		278FA3971E2EEB3700D04CFB /* libcurlcpp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurlcpp-ios.a"; path = "../../../VGLPP/VGLPP Demo/3rd Party/curlcpp/libcurlcpp-ios.a"; sourceTree = "<group>"; };
+		278FA3B11E30215700D04CFB /* cloudy.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = cloudy.vsxproj; path = ../../../assets/icons/cloudy.vsxproj; sourceTree = "<group>"; };
+		278FA3B21E30215700D04CFB /* partly_cloudy.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = partly_cloudy.vsxproj; path = ../../../assets/icons/partly_cloudy.vsxproj; sourceTree = "<group>"; };
+		278FA3B31E30215700D04CFB /* rain.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = rain.vsxproj; path = ../../../assets/icons/rain.vsxproj; sourceTree = "<group>"; };
+		278FA3B41E30215700D04CFB /* snow.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = snow.vsxproj; path = ../../../assets/icons/snow.vsxproj; sourceTree = "<group>"; };
+		278FA3B51E30215700D04CFB /* storm.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = storm.vsxproj; path = ../../../assets/icons/storm.vsxproj; sourceTree = "<group>"; };
+		278FA3B61E30215700D04CFB /* sunny.vsxproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = sunny.vsxproj; path = ../../../assets/icons/sunny.vsxproj; sourceTree = "<group>"; };
+		278FA3BD1E3021BC00D04CFB /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = ../../src/Renderer.cpp; sourceTree = "<group>"; };
+		278FA3BE1E3021BC00D04CFB /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = ../../src/Renderer.h; sourceTree = "<group>"; };
+		278FA3BF1E3021BC00D04CFB /* Startup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Startup.cpp; path = ../../src/Startup.cpp; sourceTree = "<group>"; };
+		278FA3C01E3021BC00D04CFB /* Startup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Startup.h; path = ../../src/Startup.h; sourceTree = "<group>"; };
+		278FA3C11E3021BC00D04CFB /* WeatherData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherData.cpp; path = ../../src/WeatherData.cpp; sourceTree = "<group>"; };
+		278FA3C21E3021BC00D04CFB /* WeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherData.h; path = ../../src/WeatherData.h; sourceTree = "<group>"; };
+		278FA3C31E3021BC00D04CFB /* WeatherRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherRenderer.cpp; path = ../../src/WeatherRenderer.cpp; sourceTree = "<group>"; };
+		278FA3C41E3021BC00D04CFB /* WeatherRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherRenderer.h; path = ../../src/WeatherRenderer.h; sourceTree = "<group>"; };
+		278FA3C51E3021BC00D04CFB /* WeatherSetupViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherSetupViewController.cpp; path = ../../src/WeatherSetupViewController.cpp; sourceTree = "<group>"; };
+		278FA3C61E3021BC00D04CFB /* WeatherSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherSetupViewController.h; path = ../../src/WeatherSetupViewController.h; sourceTree = "<group>"; };
+		278FA3C71E3021BC00D04CFB /* WeatherView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherView.cpp; path = ../../src/WeatherView.cpp; sourceTree = "<group>"; };
+		278FA3C81E3021BC00D04CFB /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherView.h; path = ../../src/WeatherView.h; sourceTree = "<group>"; };
+		278FA3C91E3021BC00D04CFB /* WeatherViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherViewController.cpp; path = ../../src/WeatherViewController.cpp; sourceTree = "<group>"; };
+		278FA3CA1E3021BC00D04CFB /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherViewController.h; path = ../../src/WeatherViewController.h; sourceTree = "<group>"; };
+		278FA3D21E3021D500D04CFB /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weather.png; path = ../../assets/weather.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		278FA1BB1E2E9A8F00D04CFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278FA2841E2EA48100D04CFB /* libz.tbd in Frameworks */,
+				278FA2811E2EA45300D04CFB /* libassimp-ios.a in Frameworks */,
+				278FA1E11E2E9AED00D04CFB /* libVGLPP iOS.a in Frameworks */,
+				278FA3941E2EE81A00D04CFB /* libVHTTP-iOS.a in Frameworks */,
+				278FA3961E2EEB0A00D04CFB /* libcurl-ios.a in Frameworks */,
+				278FA3701E2ED0E400D04CFB /* libfreetype-ios.a in Frameworks */,
+				278FA2791E2E9C1E00D04CFB /* libVUI.a in Frameworks */,
+				278FA3981E2EEB3700D04CFB /* libcurlcpp-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		278FA1B51E2E9A8F00D04CFB = {
+			isa = PBXGroup;
+			children = (
+				278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */,
+				278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */,
+				278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */,
+				278FA1C01E2E9A8F00D04CFB /* VGLWeather */,
+				278FA1BF1E2E9A8F00D04CFB /* Products */,
+				278FA2821E2EA48100D04CFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		278FA1BF1E2E9A8F00D04CFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278FA1BE1E2E9A8F00D04CFB /* VGLWeather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278FA1C01E2E9A8F00D04CFB /* VGLWeather */ = {
+			isa = PBXGroup;
+			children = (
+				278FA2851E2EAE3000D04CFB /* VGL Resources */,
+				278FA3611E2EB06200D04CFB /* ios */,
+				278FA3BD1E3021BC00D04CFB /* Renderer.cpp */,
+				278FA3BE1E3021BC00D04CFB /* Renderer.h */,
+				278FA3BF1E3021BC00D04CFB /* Startup.cpp */,
+				278FA3C01E3021BC00D04CFB /* Startup.h */,
+				278FA3C11E3021BC00D04CFB /* WeatherData.cpp */,
+				278FA3C21E3021BC00D04CFB /* WeatherData.h */,
+				278FA3C31E3021BC00D04CFB /* WeatherRenderer.cpp */,
+				278FA3C41E3021BC00D04CFB /* WeatherRenderer.h */,
+				278FA3C51E3021BC00D04CFB /* WeatherSetupViewController.cpp */,
+				278FA3C61E3021BC00D04CFB /* WeatherSetupViewController.h */,
+				278FA3C71E3021BC00D04CFB /* WeatherView.cpp */,
+				278FA3C81E3021BC00D04CFB /* WeatherView.h */,
+				278FA3C91E3021BC00D04CFB /* WeatherViewController.cpp */,
+				278FA3CA1E3021BC00D04CFB /* WeatherViewController.h */,
+			);
+			path = VGLWeather;
+			sourceTree = "<group>";
+		};
+		278FA1C11E2E9A8F00D04CFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				278FA1C21E2E9A8F00D04CFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		278FA1D91E2E9ABF00D04CFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278FA1DE1E2E9ABF00D04CFB /* libVGLPP.a */,
+				278FA1E01E2E9ABF00D04CFB /* libVGLPP iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278FA1F81E2E9B4B00D04CFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278FA1FC1E2E9B4B00D04CFB /* libVUI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278FA2821E2EA48100D04CFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				278FA36F1E2ED0E400D04CFB /* libfreetype-ios.a */,
+				278FA2831E2EA48100D04CFB /* libz.tbd */,
+				278FA3951E2EEB0A00D04CFB /* libcurl-ios.a */,
+				278FA2801E2EA45300D04CFB /* libassimp-ios.a */,
+				278FA3971E2EEB3700D04CFB /* libcurlcpp-ios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		278FA2851E2EAE3000D04CFB /* VGL Resources */ = {
+			isa = PBXGroup;
+			children = (
+				278FA3D21E3021D500D04CFB /* weather.png */,
+				278FA39F1E2FEDD900D04CFB /* icons */,
+				278FA36D1E2ED0AF00D04CFB /* assets */,
+				278FA2F31E2EAE6000D04CFB /* shaders */,
+			);
+			name = "VGL Resources";
+			sourceTree = "<group>";
+		};
+		278FA2F31E2EAE6000D04CFB /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				278FA2F41E2EAE6000D04CFB /* base.fs */,
+				278FA2F51E2EAE6000D04CFB /* base.vs */,
+				278FA2F61E2EAE6000D04CFB /* base_toon.fs */,
+				278FA2F71E2EAE6000D04CFB /* bump.fs */,
+				278FA2F81E2EAE6000D04CFB /* bump.vs */,
+				278FA2F91E2EAE6000D04CFB /* bump_light.fs */,
+				278FA2FA1E2EAE6000D04CFB /* gouraud.fs */,
+				278FA2FB1E2EAE6000D04CFB /* gouraud.vs */,
+				278FA2FC1E2EAE6000D04CFB /* gouraud_fast.vs */,
+				278FA2FD1E2EAE6000D04CFB /* gouraud_light.vs */,
+				278FA2FE1E2EAE6000D04CFB /* gouraud_textured.fs */,
+				278FA2FF1E2EAE6000D04CFB /* phong_light.fs */,
+				278FA3001E2EAE6000D04CFB /* pointSprite.fs */,
+				278FA3011E2EAE6000D04CFB /* pointSprite.vs */,
+				278FA3021E2EAE6000D04CFB /* selection.fs */,
+				278FA3031E2EAE6000D04CFB /* selection.vs */,
+				278FA3041E2EAE6000D04CFB /* selectionDepthRec.fs */,
+				278FA3051E2EAE6000D04CFB /* selectionDepthRec.vs */,
+				278FA3061E2EAE6000D04CFB /* shadowMap.fs */,
+				278FA3071E2EAE6000D04CFB /* shadowMap.vs */,
+				278FA3081E2EAE6000D04CFB /* shadowMapRender.fs */,
+				278FA3091E2EAE6000D04CFB /* shadowMapRender.vs */,
+				278FA30A1E2EAE6000D04CFB /* smoothColorthickLines.fs */,
+				278FA30B1E2EAE6000D04CFB /* smoothColorthickLines.gs */,
+				278FA30C1E2EAE6000D04CFB /* smoothColorthickLines.vs */,
+				278FA30D1E2EAE6000D04CFB /* smoothLine2D.fs */,
+				278FA30E1E2EAE6000D04CFB /* smoothLine2D.vs */,
+				278FA30F1E2EAE6000D04CFB /* solidAlphaTexture.fs */,
+				278FA3101E2EAE6000D04CFB /* solidAlphaTexture.vs */,
+				278FA3111E2EAE6000D04CFB /* solidColor.fs */,
+				278FA3121E2EAE6000D04CFB /* solidColor.vs */,
+				278FA3131E2EAE6000D04CFB /* solidTexture.fs */,
+				278FA3141E2EAE6000D04CFB /* solidTexture.vs */,
+				278FA3151E2EAE6000D04CFB /* spaceBoundingFrame.fs */,
+				278FA3161E2EAE6000D04CFB /* spaceBoundingFrame.vs */,
+				278FA3171E2EAE6000D04CFB /* thickLines.fs */,
+				278FA3181E2EAE6000D04CFB /* thickLines.gs */,
+				278FA3191E2EAE6000D04CFB /* thickLines.vs */,
+				278FA31A1E2EAE6000D04CFB /* user_template_basic_lighting.fs */,
+				278FA31B1E2EAE6000D04CFB /* user_template_basic_lighting.vs */,
+				278FA31C1E2EAE6000D04CFB /* user_template_basic_texture.fs */,
+				278FA31D1E2EAE6000D04CFB /* user_template_basic_texture.vs */,
+				278FA31E1E2EAE6000D04CFB /* user_template_bump.fs */,
+				278FA31F1E2EAE6000D04CFB /* user_template_bump.vs */,
+				278FA3201E2EAE6000D04CFB /* user_template_env.fs */,
+				278FA3211E2EAE6000D04CFB /* user_template_env.vs */,
+				278FA3221E2EAE6000D04CFB /* user_template_full_lighting.fs */,
+				278FA3231E2EAE6000D04CFB /* user_template_full_lighting.vs */,
+				278FA3241E2EAE6000D04CFB /* user_template_passthru_geom.fs */,
+				278FA3251E2EAE6000D04CFB /* user_template_passthru_geom.gs */,
+				278FA3261E2EAE6000D04CFB /* user_template_passthru_geom.vs */,
+				278FA3271E2EAE6000D04CFB /* user_template_pointsprite_geom.fs */,
+				278FA3281E2EAE6000D04CFB /* user_template_pointsprite_geom.gs */,
+				278FA3291E2EAE6000D04CFB /* user_template_pointsprite_geom.vs */,
+			);
+			name = shaders;
+			path = "../../../../VGLPP/VGLPP Demo/VGLPP/shaders";
+			sourceTree = "<group>";
+		};
+		278FA3611E2EB06200D04CFB /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				278FA1C11E2E9A8F00D04CFB /* Supporting Files */,
+				278FA1C41E2E9A8F00D04CFB /* AppDelegate.h */,
+				278FA1C51E2E9A8F00D04CFB /* AppDelegate.m */,
+				278FA1C71E2E9A8F00D04CFB /* iOSViewController.h */,
+				278FA1C81E2E9A8F00D04CFB /* iOSViewController.m */,
+				278FA1CA1E2E9A8F00D04CFB /* Main.storyboard */,
+				278FA1CD1E2E9A8F00D04CFB /* Assets.xcassets */,
+				278FA1CF1E2E9A8F00D04CFB /* LaunchScreen.storyboard */,
+				278FA1D21E2E9A8F00D04CFB /* Info.plist */,
+				278FA27A1E2EA14A00D04CFB /* GLView.h */,
+				278FA27B1E2EA14B00D04CFB /* GLView.mm */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		278FA3781E2EE7D700D04CFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278FA37C1E2EE7D700D04CFB /* libVHTTP.a */,
+				278FA3931E2EE81A00D04CFB /* libVHTTP-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278FA39F1E2FEDD900D04CFB /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				278FA3B11E30215700D04CFB /* cloudy.vsxproj */,
+				278FA3B21E30215700D04CFB /* partly_cloudy.vsxproj */,
+				278FA3B31E30215700D04CFB /* rain.vsxproj */,
+				278FA3B41E30215700D04CFB /* snow.vsxproj */,
+				278FA3B51E30215700D04CFB /* storm.vsxproj */,
+				278FA3B61E30215700D04CFB /* sunny.vsxproj */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		278FA1BD1E2E9A8F00D04CFB /* VGLWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278FA1D51E2E9A8F00D04CFB /* Build configuration list for PBXNativeTarget "VGLWeather" */;
+			buildPhases = (
+				278FA1BA1E2E9A8F00D04CFB /* Sources */,
+				278FA1BB1E2E9A8F00D04CFB /* Frameworks */,
+				278FA1BC1E2E9A8F00D04CFB /* Resources */,
+				278FA32A1E2EAE6600D04CFB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VGLWeather;
+			productName = VGLWeather;
+			productReference = 278FA1BE1E2E9A8F00D04CFB /* VGLWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		278FA1B61E2E9A8F00D04CFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Verto Studio LLC";
+				TargetAttributes = {
+					278FA1BD1E2E9A8F00D04CFB = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = PRTK9G57ZE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 278FA1B91E2E9A8F00D04CFB /* Build configuration list for PBXProject "VGLWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 278FA1B51E2E9A8F00D04CFB;
+			productRefGroup = 278FA1BF1E2E9A8F00D04CFB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 278FA1D91E2E9ABF00D04CFB /* Products */;
+					ProjectRef = 278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */;
+				},
+				{
+					ProductGroup = 278FA3781E2EE7D700D04CFB /* Products */;
+					ProjectRef = 278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */;
+				},
+				{
+					ProductGroup = 278FA1F81E2E9B4B00D04CFB /* Products */;
+					ProjectRef = 278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				278FA1BD1E2E9A8F00D04CFB /* VGLWeather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		278FA1DE1E2E9ABF00D04CFB /* libVGLPP.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVGLPP.a;
+			remoteRef = 278FA1DD1E2E9ABF00D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		278FA1E01E2E9ABF00D04CFB /* libVGLPP iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libVGLPP iOS.a";
+			remoteRef = 278FA1DF1E2E9ABF00D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		278FA1FC1E2E9B4B00D04CFB /* libVUI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVUI.a;
+			remoteRef = 278FA1FB1E2E9B4B00D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		278FA37C1E2EE7D700D04CFB /* libVHTTP.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVHTTP.a;
+			remoteRef = 278FA37B1E2EE7D700D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		278FA3931E2EE81A00D04CFB /* libVHTTP-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libVHTTP-iOS.a";
+			remoteRef = 278FA3921E2EE81A00D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		278FA1BC1E2E9A8F00D04CFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278FA3B91E30215700D04CFB /* rain.vsxproj in Resources */,
+				278FA36E1E2ED0AF00D04CFB /* assets in Resources */,
+				278FA1D11E2E9A8F00D04CFB /* LaunchScreen.storyboard in Resources */,
+				278FA3B71E30215700D04CFB /* cloudy.vsxproj in Resources */,
+				278FA3BA1E30215700D04CFB /* snow.vsxproj in Resources */,
+				278FA1CE1E2E9A8F00D04CFB /* Assets.xcassets in Resources */,
+				278FA3BC1E30215700D04CFB /* sunny.vsxproj in Resources */,
+				278FA3B81E30215700D04CFB /* partly_cloudy.vsxproj in Resources */,
+				278FA3BB1E30215700D04CFB /* storm.vsxproj in Resources */,
+				278FA1CC1E2E9A8F00D04CFB /* Main.storyboard in Resources */,
+				278FA3D31E3021D500D04CFB /* weather.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		278FA1BA1E2E9A8F00D04CFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278FA1C91E2E9A8F00D04CFB /* iOSViewController.m in Sources */,
+				278FA3D01E3021BC00D04CFB /* WeatherView.cpp in Sources */,
+				278FA3CC1E3021BC00D04CFB /* Startup.cpp in Sources */,
+				278FA3CB1E3021BC00D04CFB /* Renderer.cpp in Sources */,
+				278FA3CE1E3021BC00D04CFB /* WeatherRenderer.cpp in Sources */,
+				278FA27C1E2EA14B00D04CFB /* GLView.mm in Sources */,
+				278FA3CD1E3021BC00D04CFB /* WeatherData.cpp in Sources */,
+				278FA1C61E2E9A8F00D04CFB /* AppDelegate.m in Sources */,
+				278FA1C31E2E9A8F00D04CFB /* main.m in Sources */,
+				278FA3D11E3021BC00D04CFB /* WeatherViewController.cpp in Sources */,
+				278FA3CF1E3021BC00D04CFB /* WeatherSetupViewController.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		278FA1CA1E2E9A8F00D04CFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				278FA1CB1E2E9A8F00D04CFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		278FA1CF1E2E9A8F00D04CFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				278FA1D01E2E9A8F00D04CFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		278FA1D31E2E9A8F00D04CFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		278FA1D41E2E9A8F00D04CFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		278FA1D61E2E9A8F00D04CFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PRTK9G57ZE;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"TARGET_OS_IPHONE=1",
+					"MOBILE_USE_OPENGLES_2=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(VGLROOT)\"",
+					"\"$(VGLROOT)/VGLPP/vnl/http\"/**",
+					"\"$(VGLROOT)/VGLPP/vui/controller/google/drive\"",
+					"\"$(VGLROOT)/VGLPP\"",
+					"\"$(VGLROOT)/VGLPP/vutil\"",
+					"\"$(VGLROOT)/VGLPP/vutil/os\"",
+					"\"$(VGLROOT)/VGLPP/vutil/os/apple\"",
+					"\"$(VGLROOT)/VGLPP/vgl\"",
+					"\"$(VGLROOT)/VGLPP/vom/api3d\"",
+					"\"$(VGLROOT)/VGLPP/vui\"/**",
+					"\"$(VGLROOT)/VGLPP/vom/api3d/GL\"",
+					"\"$(VGLROOT)/VGLPP/vom\"",
+					"\"$(VGLROOT)/VGLPP/vom/os\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/vui\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/apple\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/ios\"",
+					"\"$(VGLROOT)/VGLPP/vom/Undo\"",
+					"\"$(VGLROOT)/VGLPP/vgl/Pass Renderers\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/Effect Bases\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/Effect Bases/GL\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/PostEffects\"",
+					"\"$(VGLROOT)/VGLPP/vgl/Effect Property Classes\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/GL\"",
+					"\"$(VGLROOT)/VGLPP/vgl/api3d\"",
+					"\"$(VGLROOT)/VGLPP/vgl/api3d/GL\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include/freetype2\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include/freetype2/freetype\"",
+					"\"$(VGLROOT)/3rd Party/json/include\"",
+				);
+				INFOPLIST_FILE = VGLWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../Verto Studio/Ortho Sketch 3D/Verto/3rd party/assimp\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/freetype\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/curl\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/curlcpp\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vertostudio.VGLWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VGLROOT = "/Users/mike/Documents/xcode/VGLPP/VGLPP Demo";
+			};
+			name = Debug;
+		};
+		278FA1D71E2E9A8F00D04CFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PRTK9G57ZE;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_OS_IPHONE=1",
+					"MOBILE_USE_OPENGLES_2=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(VGLROOT)\"",
+					"\"$(VGLROOT)/VGLPP/vnl/http\"/**",
+					"\"$(VGLROOT)/VGLPP/vui/controller/google/drive\"",
+					"\"$(VGLROOT)/VGLPP\"",
+					"\"$(VGLROOT)/VGLPP/vutil\"",
+					"\"$(VGLROOT)/VGLPP/vutil/os\"",
+					"\"$(VGLROOT)/VGLPP/vutil/os/apple\"",
+					"\"$(VGLROOT)/VGLPP/vgl\"",
+					"\"$(VGLROOT)/VGLPP/vom/api3d\"",
+					"\"$(VGLROOT)/VGLPP/vui\"/**",
+					"\"$(VGLROOT)/VGLPP/vom/api3d/GL\"",
+					"\"$(VGLROOT)/VGLPP/vom\"",
+					"\"$(VGLROOT)/VGLPP/vom/os\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/vui\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/apple\"",
+					"\"$(VGLROOT)/VGLPP/vom/os/ios\"",
+					"\"$(VGLROOT)/VGLPP/vom/Undo\"",
+					"\"$(VGLROOT)/VGLPP/vgl/Pass Renderers\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/Effect Bases\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/Effect Bases/GL\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/PostEffects\"",
+					"\"$(VGLROOT)/VGLPP/vgl/Effect Property Classes\"",
+					"\"$(VGLROOT)/VGLPP/vgl/VGL System Effects/GL\"",
+					"\"$(VGLROOT)/VGLPP/vgl/api3d\"",
+					"\"$(VGLROOT)/VGLPP/vgl/api3d/GL\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include/freetype2\"",
+					"\"$(VGLROOT)/3rd Party/freetype/include/freetype2/freetype\"",
+					"\"$(VGLROOT)/3rd Party/json/include\"",
+				);
+				INFOPLIST_FILE = VGLWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../Verto Studio/Ortho Sketch 3D/Verto/3rd party/assimp\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/freetype\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/curl\"",
+					"\"$(SRCROOT)/../../../VGLPP/VGLPP Demo/3rd Party/curlcpp\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vertostudio.VGLWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VGLROOT = "/Users/mike/Documents/xcode/VGLPP/VGLPP Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278FA1B91E2E9A8F00D04CFB /* Build configuration list for PBXProject "VGLWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278FA1D31E2E9A8F00D04CFB /* Debug */,
+				278FA1D41E2E9A8F00D04CFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278FA1D51E2E9A8F00D04CFB /* Build configuration list for PBXNativeTarget "VGLWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278FA1D61E2E9A8F00D04CFB /* Debug */,
+				278FA1D71E2E9A8F00D04CFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 278FA1B61E2E9A8F00D04CFB /* Project object */;
+}
