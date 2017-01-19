@@ -6,11 +6,15 @@
 //  Copyright © 2017 Verto Studio LLC. All rights reserved.
 //
 
+#include "pch.h"
 #include "Startup.h"
 #include "System.h"
 #include "StateMachine.h"
 #include "Window.h"
 #include "WeatherViewController.h"
+#ifdef VGLPP_HOLOGRAPHIC
+#include "WeatherSpaceController.h"
+#endif
 
 using namespace std;
 
@@ -28,7 +32,8 @@ void vglStartupUI()
   }
   else
   {
-    
+    auto weatherSC = make_shared<WeatherSpaceController>();
+    vui::Window::getCurrentWindow()->setRootSpaceController(weatherSC);
   }
   
   //OpenGL cannot background-thread compile shaders

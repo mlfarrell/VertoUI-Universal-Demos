@@ -9,10 +9,16 @@
 #pragma once
 
 #include "vgl.h"
+#include <atomic>
 #include "System.h"
 #include "Scene.h"
 #include "ViewController.h"
 #ifdef WIN10_BUILD
+#ifdef VGLPP_HOLOGRAPHIC
+#include "Cursor.h"
+#include "SpatialSurfaceManager.h"
+#include "SpaceController.h"
+#endif
 #include "Win10TextureLoader.h"
 #define TextureLoaderClass Win10TextureLoader 
 #else
@@ -69,6 +75,11 @@ public:
   ///Provide that here to activate it (and retrieve via Scene::systemScene())
   virtual vom::Scene *systemScene() override;
     
+#ifdef VGLPP_HOLOGRAPHIC
+  void setReferenceFrame(Windows::Perception::Spatial::SpatialStationaryFrameOfReference ^rf);
+  inline vui::holo::SpatialSurfaceManager::Pointer getSpatialSurfaceManager() { return spatialSurfaceManager; }
+#endif
+
 protected:
   int width, height;
   bool isHolographic;

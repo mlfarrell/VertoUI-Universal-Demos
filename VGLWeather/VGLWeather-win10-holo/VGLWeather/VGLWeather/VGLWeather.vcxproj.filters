@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>67a8e7e2-7b6d-4dfd-818c-dd7a07c060eb</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Binaries">
+      <Extensions>dll;</Extensions>
+    </Filter>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Win10">
+      <UniqueIdentifier>{41d97b03-a106-445c-8c5f-52f20b67e10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\VGLPP/VUI">
+      <UniqueIdentifier>{f668be29-04fb-4fd7-a594-32ff39c349a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\VGLPP/VUI\vui">
+      <UniqueIdentifier>{9059f8c5-aeee-4de4-b9f8-821148048b30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\icons">
+      <UniqueIdentifier>{a7064fd4-e63f-4adf-8625-cdcbe7878e22}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>Win10</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Win10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Startup.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherData.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherRenderer.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherSetupViewController.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherView.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherViewController.cpp" />
+    <ClCompile Include="..\..\..\src\Renderer.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherSpaceController.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherSpace.cpp" />
+    <ClCompile Include="..\..\..\src\WeatherSpaceContainer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h">
+      <Filter>Win10</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Win10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Renderer.h" />
+    <ClInclude Include="..\..\..\src\Startup.h" />
+    <ClInclude Include="..\..\..\src\WeatherData.h" />
+    <ClInclude Include="..\..\..\src\WeatherRenderer.h" />
+    <ClInclude Include="..\..\..\src\WeatherSetupViewController.h" />
+    <ClInclude Include="..\..\..\src\WeatherView.h" />
+    <ClInclude Include="..\..\..\src\WeatherViewController.h" />
+    <ClInclude Include="..\..\..\src\WeatherSpaceController.h" />
+    <ClInclude Include="..\..\..\src\WeatherSpace.h" />
+    <ClInclude Include="..\..\..\src\WeatherSpaceContainer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\assets\weather.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(AngleBinPath)libEGL.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="$(AngleBinPath)libGLESv2.dll">
+      <Filter>Binaries</Filter>
+    </None>
+    <None Include="VGLWeather_TemporaryKey.pfx">
+      <Filter>Win10</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\phong_light.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\pointSprite.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\pointSprite.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\selection.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\selection.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\selectionDepthRec.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\selectionDepthRec.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\shadowMap.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\shadowMap.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\shadowMapRender.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\shadowMapRender.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\smoothColorthickLines.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\smoothColorthickLines.gs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\smoothColorthickLines.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\smoothLine2D.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\smoothLine2D.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidAlphaTexture.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidAlphaTexture.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidColor.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidColor.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidTexture.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\solidTexture.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\spaceBoundingFrame.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\spaceBoundingFrame.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\thickLines.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\thickLines.gs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\thickLines.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_basic_lighting.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_basic_lighting.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_basic_texture.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_basic_texture.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_bump.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_bump.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_env.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_env.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_full_lighting.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_full_lighting.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_passthru_geom.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_passthru_geom.gs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_passthru_geom.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_pointsprite_geom.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_pointsprite_geom.gs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\user_template_pointsprite_geom.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\base.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\base.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\base_toon.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\bump.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\bump.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\bump_light.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\gouraud.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\gouraud.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\gouraud_fast.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\gouraud_light.vs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\..\..\verto\VGLPP\shaders\gouraud_textured.fs">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\rain.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\snow.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\storm.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\sunny.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\cloudy.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+    <None Include="..\..\..\assets\icons\partly_cloudy.vsxproj">
+      <Filter>Assets\icons</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <Filter>Win10</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialDepthOnlyVPRTVertexShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialSimpleLightingPixelShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialSolidColorPixelShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialSurfaceGeometryShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialSurfaceVertexShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialSurfaceVPRTVertexShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialDepthOnlyGeometryShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialDepthOnlyPixelShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\..\..\..\verto\VGLPP\vui\holo\mesh\hlsl\SpatialDepthOnlyVertexShader.hlsl">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\..\..\..\..\verto_studio\Ortho Sketch 3D\cube.obj">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </Object>
+    <Object Include="..\..\..\..\..\verto_studio\Ortho Sketch 3D\cube_quad.obj">
+      <Filter>Assets\VGLPP/VUI</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\assets\fonts\Neuton-Italic.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\Neuton-Light.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\Neuton-Regular.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\arrows.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\Cabin-Medium.otf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\NeutonCursive-Regular.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\Neuton-Extrabold.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+    <Font Include="..\..\..\assets\fonts\Neuton-Extralight.ttf">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\assets\fonts\Neuton-OFL.txt">
+      <Filter>Assets\VGLPP/VUI\vui</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

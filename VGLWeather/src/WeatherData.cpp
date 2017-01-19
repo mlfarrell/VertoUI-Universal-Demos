@@ -6,6 +6,7 @@
 //  Copyright © 2017 Verto Studio LLC. All rights reserved.
 //
 
+#include "pch.h"
 #include "WeatherData.h"
 
 static WeatherData *currentWeatherData = nullptr;

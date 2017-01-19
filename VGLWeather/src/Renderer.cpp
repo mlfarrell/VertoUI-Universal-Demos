@@ -9,12 +9,16 @@
 /** This class represents a basic portable VGL/VUI app shell, it should seldeom need to be modified **
 **  for most basic "universal" VGL/VUI apps.                                                        **/
 
+#include "pch.h"
 #include "Renderer.h"
 #include "EventDispatcher.h"
 #include "Window.h"
 #include "Startup.h"
 #include "VGLThreadScheduler.h"
 #include "ClientConnection.h"
+#ifdef VGLPP_HOLOGRAPHIC
+#include <angle_holographic_extensions.h>
+#endif
 
 using namespace std;
 using namespace vgl;
@@ -36,7 +40,6 @@ Renderer::Renderer(bool holographic, float contentScale, GLuint defaultFBO)
   Texture2D::setTextureLoader(textureLoader);
 
   //platform-specific setup
-  //platform-specific setup
 #ifndef VGLPP_HOLOGRAPHIC
   scheduleTask([this] {
     createUI();
@@ -46,13 +49,7 @@ Renderer::Renderer(bool holographic, float contentScale, GLuint defaultFBO)
   textureLoader->setMainThreadCanBlock(false);
   
   glStateMachine->enableLight(true, 0);
-  
-  spatialSurfaceManager = make_shared<vui::holo::SpatialSurfaceManager>(spatialBoundingVolume);
-  spatialInputHandler = make_shared<vui::holo::SpatialInputHandler>();
-  
-  spatialSurfaceManager->setReferenceFrame(stationaryReferenceFrame);
-  spatialInputHandler->setReferenceFrame(stationaryReferenceFrame);
-  spatialInputHandler->setAudioHandler(audioHandler);
+  //spatialInputHandler->setAudioHandler(audioHandler);
   
   scheduleTask([this] {
     createUI();
@@ -67,7 +64,6 @@ Renderer::~Renderer()
 
 #ifdef VGLPP_HOLOGRAPHIC
   spatialSurfaceManager = nullptr;
-  rootSpaceController = nullptr;
 #endif
 }
 
@@ -93,14 +89,13 @@ void Renderer::updateHoloEvents()
 }
 #else
 
-void Renderer::setRootSpaceController(vui::holo::SpaceController::Pointer rootSC)
-{
-  rootSpaceController = rootSC;
-}
-
 void Renderer::updateHoloEvents()
 {
-  
+  auto vgl = glStateMachine;
+
+  if(!spatialInputHandler || !spatialSurfaceManager)
+    return;
+
   auto pos = spatialInputHandler->poll();
   if(pos)
   {
@@ -184,7 +179,11 @@ void Renderer::draw()
   auto rootSpace = vui::Window::getCurrentWindow()->getRootSpaceController()->getSpace();
 
   holoCursor->render();
-  spatialSurfaceManager->render(true, spatialSurfaceRenderMode);
+
+  //this can be omitted if you don't need hologram placement mode
+  spatialSurfaceManager->enableRaycasting(true);
+
+  spatialSurfaceManager->render(true, vui::holo::SpatialSurfaceManager::RM_DEPTH_ONLY);
   rootSpace->renderTree();
   holoCursor->render();
 #endif
@@ -267,3 +266,21 @@ vom::Scene *Renderer::systemScene()
 {
   return scene;
 }
+
+#ifdef VGLPP_HOLOGRAPHIC
+void Renderer::setReferenceFrame(Windows::Perception::Spatial::SpatialStationaryFrameOfReference ^rf)
+{
+  stationaryReferenceFrame = rf;
+
+  if(!spatialSurfaceManager)
+  {
+    Box3D spatialBoundingVolume = { float3(20, 20, 5), float3::zero };
+    spatialSurfaceManager = make_shared<vui::holo::SpatialSurfaceManager>(spatialBoundingVolume);
+    spatialInputHandler = make_shared<vui::holo::SpatialInputHandler>();
+  }
+
+  spatialSurfaceManager->setReferenceFrame(stationaryReferenceFrame);
+  spatialInputHandler->setReferenceFrame(stationaryReferenceFrame);
+
+}
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Verto Studio LLC. All rights reserved.
 //
 
+#include "pch.h"
 #include <sstream>
 #include "Renderer.h"
 #include "WeatherRenderer.h"
@@ -50,8 +51,18 @@ WeatherRenderer::WeatherRenderer(WeatherData::Pointer weatherData, function<void
         
         System::system().scheduleTask([=] {
           
-          auto locationMaterial = make_shared<Material>(nullptr, float4(0, 1, 1, 1), float4(0.2f, 0.2f, 0.2f, 1), float4::zero, float4::zero);
-          auto temperatureMaterial = make_shared<Material>(nullptr, float4(0.5f, 1, 1, 1), float4(0.2f, 0.2f, 0.2f, 1), float4::zero, float4::zero);
+          Material::Pointer locationMaterial, temperatureMaterial;
+
+          if(System::system().getDeviceClass() == DC_HOLOGRAPHIC)
+          {
+            locationMaterial = make_shared<Material>(nullptr, float4(0, 0.6f, 0.6f, 1), float4(0.1f, 0.1f, 0.1f, 1), float4::zero, float4::zero);
+            temperatureMaterial = make_shared<Material>(nullptr, float4(0.3f, 0.7f, 0.7f, 1), float4(0.1f, 0.1f, 0.1f, 1), float4::zero, float4::zero);
+          }
+          else
+          {
+            locationMaterial = make_shared<Material>(nullptr, float4(0, 1, 1, 1), float4(0.2f, 0.2f, 0.2f, 1), float4::zero, float4::zero);
+            temperatureMaterial = make_shared<Material>(nullptr, float4(0.5f, 1, 1, 1), float4(0.2f, 0.2f, 0.2f, 1), float4::zero, float4::zero);
+          }
 
           for(auto e : { model1, model2 })
           {
@@ -76,6 +87,13 @@ WeatherRenderer::WeatherRenderer(WeatherData::Pointer weatherData, function<void
           scene->addEntity(temperatureText);
           scene->addEntity(locationText);
           
+          if(System::system().getDeviceClass() == DC_HOLOGRAPHIC)
+          {
+            scene->setSkipTransform(true);
+            scene->setSkipLights(true);
+            scene->setMultipassEnabled(false);
+          }
+
           onLoadingFinished();
         });
       });
@@ -147,5 +165,6 @@ void WeatherRenderer::render()
   scene->render();
   vgl->popModelView();
   vgl->popProjection();
-  vgl->enableDepthTesting(false);
+  if(!holoVR)
+    vgl->enableDepthTesting(false);
 }

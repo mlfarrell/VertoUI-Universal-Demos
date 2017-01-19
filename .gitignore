@@ -1,2 +1,12 @@
 VGLWeather/VGLWeather-iOS/VGLWeather.xcodeproj/xcuserdata/mike.xcuserdatad/xcschemes
 VGLWeather/VGLWeather-iOS/VGLWeather.xcodeproj/project.xcworkspace
+VGLWeather/VGLWeather-win10-holo/VGLWeather/VGLWeather/Debug/
+VGLWeather/VGLWeather-win10-holo/VGLWeather/VGLWeather/Release/*
+VGLWeather/VGLWeather-win10-holo/VGLWeather/Release-HoloLens/*
+VGLWeather/VGLWeather-win10-holo/VGLWeather/Debug-HoloLens/*
+VGLWeather/VGLWeather-win10-holo/VGLWeather/Debug/*
+VGLWeather/VGLWeather-win10-holo/VGLWeather/Release/*
+VGLWeather/VGLWeather-win10-holo/VGLWeather/ipch/*
+*.pri
+*.opendb
+*.VC.db

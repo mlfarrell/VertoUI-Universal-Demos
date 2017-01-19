@@ -6,6 +6,7 @@
 //  Copyright © 2017 Verto Studio LLC. All rights reserved.
 //
 
+#include "pch.h"
 #include "WeatherSetupViewController.h"
 #include "WeatherViewController.h"
 #include "Window.h"
@@ -17,6 +18,9 @@
 #include "TextEntry.h"
 #include "ClientConnection.h"
 #include "json.hpp"
+#ifdef VGLPP_HOLOGRAPHIC
+#include "WeatherSpaceController.h"
+#endif
 
 using json = nlohmann::json;
 using namespace std;
@@ -53,8 +57,13 @@ void WeatherSetupViewController::loadView()
 
 void WeatherSetupViewController::showWeather()
 {
+#ifndef VGLPP_HOLOGRAPHIC
   auto rootVC = dynamic_pointer_cast<WeatherViewController>(Window::getCurrentWindow()->getRootViewController());
   rootVC->showWeather(weatherData);
+#else
+  auto rootSC = dynamic_pointer_cast<WeatherSpaceController>(Window::getCurrentWindow()->getRootSpaceController());
+  rootSC->showWeather(weatherData);
+#endif
 }
 
 void WeatherSetupViewController::onGoPressed(Control::Pointer sender)
