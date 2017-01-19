@@ -6,6 +6,8 @@
 #include "WeatherRenderer.h"
 #include "WeatherSpace.h"
 
+#ifdef VGLPP_HOLOGRAPHIC
+
 class WeatherSpaceController : public vui::holo::SpaceController
 {
 public:
@@ -36,3 +38,12 @@ protected:
   bool weatherReady = false;
   bool showWeatherBoundingFrame = false;
 };
+
+#else
+
+class WeatherSpaceController : public vui::holo::SpaceController
+{
+  
+};
+
+#endif

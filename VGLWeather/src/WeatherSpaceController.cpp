@@ -107,16 +107,16 @@ void WeatherSpaceController::renderSpace()
     if(showWeatherBoundingFrame)
     {
       if(!weatherSpace->isPlaced())
-        weatherSpace->renderBoundingFrame(vui::holo::Space::BFT_BASIC);
+        weatherSpace->renderBoundingFrame(Space::BFT_BASIC);
       else
-        weatherSpace->renderBoundingFrame(vui::holo::Space::BFT_TABLE_MANIP_ROT_SCALE);
+        weatherSpace->renderBoundingFrame(Space::BFT_TABLE_MANIP_ROT_SCALE);
     }
 
     weatherRenderer->render();
   }
 }
 
-void WeatherSpaceController::onGlobalSpaceSelectBegan(const float3 &pos, const vui::holo::ray &r)
+void WeatherSpaceController::onGlobalSpaceSelectBegan(const float3 &pos, const ray &r)
 {
   if(showWeatherBoundingFrame)
   {
@@ -155,11 +155,11 @@ void WeatherSpaceController::onGlobalSpaceSelectMovedNorm(const float3 &translat
 {
 }
 
-void WeatherSpaceController::onGlobalSpaceSelectEnded(const float3 &pos, const vui::holo::ray &r)
+void WeatherSpaceController::onGlobalSpaceSelectEnded(const float3 &pos, const ray &r)
 {
 }
 
-void WeatherSpaceController::onWeatherSpaceSelectBegan(const float3 & pos, const vui::holo::ray & r)
+void WeatherSpaceController::onWeatherSpaceSelectBegan(const float3 &pos, const ray &r)
 {
   //bring back the setup UI when tapping weather hologram
   setupSC->getSpace()->setTagAlong(true, float3::zero, 1.7f);

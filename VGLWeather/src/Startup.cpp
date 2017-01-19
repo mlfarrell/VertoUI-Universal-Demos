@@ -12,9 +12,7 @@
 #include "StateMachine.h"
 #include "Window.h"
 #include "WeatherViewController.h"
-#ifdef VGLPP_HOLOGRAPHIC
 #include "WeatherSpaceController.h"
-#endif
 
 using namespace std;
 

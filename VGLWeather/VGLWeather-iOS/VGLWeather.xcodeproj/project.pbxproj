@@ -14,7 +14,6 @@
 		278FA1CE1E2E9A8F00D04CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278FA1CD1E2E9A8F00D04CFB /* Assets.xcassets */; };
 		278FA1D11E2E9A8F00D04CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278FA1CF1E2E9A8F00D04CFB /* LaunchScreen.storyboard */; };
 		278FA1E11E2E9AED00D04CFB /* libVGLPP iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA1E01E2E9ABF00D04CFB /* libVGLPP iOS.a */; };
-		278FA2791E2E9C1E00D04CFB /* libVUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA1FC1E2E9B4B00D04CFB /* libVUI.a */; };
 		278FA27C1E2EA14B00D04CFB /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 278FA27B1E2EA14B00D04CFB /* GLView.mm */; };
 		278FA2811E2EA45300D04CFB /* libassimp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA2801E2EA45300D04CFB /* libassimp-ios.a */; };
 		278FA2841E2EA48100D04CFB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA2831E2EA48100D04CFB /* libz.tbd */; };
@@ -91,6 +90,7 @@
 		278FA3D01E3021BC00D04CFB /* WeatherView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C71E3021BC00D04CFB /* WeatherView.cpp */; };
 		278FA3D11E3021BC00D04CFB /* WeatherViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278FA3C91E3021BC00D04CFB /* WeatherViewController.cpp */; };
 		278FA3D31E3021D500D04CFB /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 278FA3D21E3021D500D04CFB /* weather.png */; };
+		27BD294C1E3092F80007C590 /* libVUI-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BD28A11E30929C0007C590 /* libVUI-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,13 +108,6 @@
 			remoteGlobalIDString = 27294A631AD712320011F04D;
 			remoteInfo = "VGLPP iOS";
 		};
-		278FA1FB1E2E9B4B00D04CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 278FA1EB1E2E9B2500D04CFB;
-			remoteInfo = VUI;
-		};
 		278FA37B1E2EE7D700D04CFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */;
@@ -128,6 +121,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 278FA3901E2EE7DE00D04CFB;
 			remoteInfo = "VHTTP-iOS";
+		};
+		27BD28A01E30929C0007C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BD289C1E30929C0007C590 /* VUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 278FA1EB1E2E9B2500D04CFB;
+			remoteInfo = "VUI-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -209,7 +209,6 @@
 		278FA1D01E2E9A8F00D04CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278FA1D21E2E9A8F00D04CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VGLPP.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VGLPP.xcodeproj"; sourceTree = "<group>"; };
-		278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VUI.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VUI/VUI.xcodeproj"; sourceTree = "<group>"; };
 		278FA27A1E2EA14A00D04CFB /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
 		278FA27B1E2EA14B00D04CFB /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
 		278FA2801E2EA45300D04CFB /* libassimp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libassimp-ios.a"; path = "../../../Verto Studio/Ortho Sketch 3D/Verto/3rd party/assimp/libassimp-ios.a"; sourceTree = "<group>"; };
@@ -294,6 +293,8 @@
 		278FA3C91E3021BC00D04CFB /* WeatherViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeatherViewController.cpp; path = ../../src/WeatherViewController.cpp; sourceTree = "<group>"; };
 		278FA3CA1E3021BC00D04CFB /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherViewController.h; path = ../../src/WeatherViewController.h; sourceTree = "<group>"; };
 		278FA3D21E3021D500D04CFB /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weather.png; path = ../../assets/weather.png; sourceTree = "<group>"; };
+		27BD289C1E30929C0007C590 /* VUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VUI.xcodeproj; path = "../../../VGLPP/VGLPP Demo/VUI.xcodeproj"; sourceTree = "<group>"; };
+		27BD294D1E3093230007C590 /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,9 +306,9 @@
 				278FA2811E2EA45300D04CFB /* libassimp-ios.a in Frameworks */,
 				278FA1E11E2E9AED00D04CFB /* libVGLPP iOS.a in Frameworks */,
 				278FA3941E2EE81A00D04CFB /* libVHTTP-iOS.a in Frameworks */,
+				27BD294C1E3092F80007C590 /* libVUI-iOS.a in Frameworks */,
 				278FA3961E2EEB0A00D04CFB /* libcurl-ios.a in Frameworks */,
 				278FA3701E2ED0E400D04CFB /* libfreetype-ios.a in Frameworks */,
-				278FA2791E2E9C1E00D04CFB /* libVUI.a in Frameworks */,
 				278FA3981E2EEB3700D04CFB /* libcurlcpp-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +319,8 @@
 		278FA1B51E2E9A8F00D04CFB = {
 			isa = PBXGroup;
 			children = (
+				27BD289C1E30929C0007C590 /* VUI.xcodeproj */,
 				278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */,
-				278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */,
 				278FA1D81E2E9ABF00D04CFB /* VGLPP.xcodeproj */,
 				278FA1C01E2E9A8F00D04CFB /* VGLWeather */,
 				278FA1BF1E2E9A8F00D04CFB /* Products */,
@@ -371,14 +372,6 @@
 			children = (
 				278FA1DE1E2E9ABF00D04CFB /* libVGLPP.a */,
 				278FA1E01E2E9ABF00D04CFB /* libVGLPP iOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		278FA1F81E2E9B4B00D04CFB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				278FA1FC1E2E9B4B00D04CFB /* libVUI.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -481,6 +474,7 @@
 				278FA1CF1E2E9A8F00D04CFB /* LaunchScreen.storyboard */,
 				278FA1D21E2E9A8F00D04CFB /* Info.plist */,
 				278FA27A1E2EA14A00D04CFB /* GLView.h */,
+				27BD294D1E3093230007C590 /* pch.h */,
 				278FA27B1E2EA14B00D04CFB /* GLView.mm */,
 			);
 			name = ios;
@@ -506,6 +500,14 @@
 				278FA3B61E30215700D04CFB /* sunny.vsxproj */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		27BD289D1E30929C0007C590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27BD28A11E30929C0007C590 /* libVUI-iOS.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,8 +568,8 @@
 					ProjectRef = 278FA3771E2EE7D700D04CFB /* VHTTP.xcodeproj */;
 				},
 				{
-					ProductGroup = 278FA1F81E2E9B4B00D04CFB /* Products */;
-					ProjectRef = 278FA1F71E2E9B4B00D04CFB /* VUI.xcodeproj */;
+					ProductGroup = 27BD289D1E30929C0007C590 /* Products */;
+					ProjectRef = 27BD289C1E30929C0007C590 /* VUI.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -592,13 +594,6 @@
 			remoteRef = 278FA1DF1E2E9ABF00D04CFB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		278FA1FC1E2E9B4B00D04CFB /* libVUI.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVUI.a;
-			remoteRef = 278FA1FB1E2E9B4B00D04CFB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		278FA37C1E2EE7D700D04CFB /* libVHTTP.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -611,6 +606,13 @@
 			fileType = archive.ar;
 			path = "libVHTTP-iOS.a";
 			remoteRef = 278FA3921E2EE81A00D04CFB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27BD28A11E30929C0007C590 /* libVUI-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libVUI-iOS.a";
+			remoteRef = 27BD28A01E30929C0007C590 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -781,6 +783,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(VGLROOT)\"",
+					"\"$(SRCROOT)/VGLWeather\"",
 					"\"$(VGLROOT)/VGLPP/vnl/http\"/**",
 					"\"$(VGLROOT)/VGLPP/vui/controller/google/drive\"",
 					"\"$(VGLROOT)/VGLPP\"",
@@ -837,6 +840,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(VGLROOT)\"",
+					"\"$(SRCROOT)/VGLWeather\"",
 					"\"$(VGLROOT)/VGLPP/vnl/http\"/**",
 					"\"$(VGLROOT)/VGLPP/vui/controller/google/drive\"",
 					"\"$(VGLROOT)/VGLPP\"",
